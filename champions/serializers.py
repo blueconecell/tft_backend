@@ -23,12 +23,8 @@ class ChampionListSerializer(ModelSerializer):
     skill_photo = PhotoSerializer(many=True, read_only=True)
     # 계열
     origin = OriginSerializer(many=True, read_only=True)
-    # 계열 초상화
-    origin_photo = PhotoSerializer(many=True, read_only=True)
     # 직업
     job = JobSerializer(many=True, read_only=True)
-    # 직업 초상화
-    job_photo = PhotoSerializer(many=True, read_only=True)
     
     class Meta:
         model = Champion
@@ -53,6 +49,4 @@ class ChampionListSerializer(ModelSerializer):
             "job",
             "champion_photo",
             "skill_photo",
-            "origin_photo",
-            "job_photo",
         )
